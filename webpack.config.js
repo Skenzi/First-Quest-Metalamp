@@ -1,5 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 
 const mode = process.env.NODE_ENV || 'development';
 
@@ -13,12 +15,36 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(scss|css)$/,
+                test: /\.s?css$/,
                 use: [
-                    'style-loader',
-                    'css-loader',
-                    'postcss-loader',
-                    'sass-loader'
+                    {
+                        loader: 'style-loader',
+                        options: {
+                            sourceMap: true,
+                        }
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true,
+                        }
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: [
+                                autoprefixer(),
+                                cssnano(),
+                            ],
+                            sourceMap: true,
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true,
+                        }
+                    }
                 ]
             },
             {

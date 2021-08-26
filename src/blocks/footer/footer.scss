@@ -1,0 +1,53 @@
+@mixin footer-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-top {
+    padding: 100px 140px;
+    @include footer-flex();
+}
+.footer-bottom {
+    padding: 24px 140px;
+    @include footer-flex();
+    &-item {
+        opacity: 0.75;
+    }
+}
+.footer-item {
+    flex: 1 1 240px;
+    font-family: 'Montserrat', serif;
+    color: #1F2041;
+    &:nth-child(1n + 2) {
+        margin-left: 20px;
+    }
+    &-title {
+        font-weight: bold;
+    }
+    &-description {
+        margin-top: 20px;
+        opacity: 0.75;
+    }
+    &-list {
+        opacity: 0.5;
+        list-style: none;
+        & li {
+            margin-top: 20px;
+        }
+    }
+    &-link {
+        text-decoration-line: none;
+        color: #1F2041;
+        opacity: 0.5;
+    }
+    &-subscribe {
+        margin-top: 20px;
+    }
+}
+.subscribe-email {
+    padding: 15px 160px 15px 15px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        &::placeholder {
+            color: rgba(31, 32, 65, 0.25);
+        }
+}

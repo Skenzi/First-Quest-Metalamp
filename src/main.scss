@@ -13,11 +13,21 @@
     font-weight: 400;
 }
 @import 'blocks/header/header.scss';
+@import 'blocks/footer/footer.scss';
 
 * {
     box-sizing: border-box;
 }
 
 body {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+p {
     margin: 0;
 }

@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
@@ -18,26 +19,13 @@ module.exports = {
                 test: /\.s?css$/,
                 use: [
                     {
-                        loader: 'style-loader',
-                        options: {
-                            sourceMap: true,
-                        }
+                        loader: MiniCssExtractPlugin.loader,
                     },
                     {
                         loader: 'css-loader',
-                        options: {
-                            sourceMap: true,
-                        }
                     },
                     {
                         loader: 'postcss-loader',
-                        options: {
-                            plugins: [
-                                autoprefixer(),
-                                cssnano(),
-                            ],
-                            sourceMap: true,
-                        }
                     },
                     {
                         loader: 'sass-loader',
@@ -64,8 +52,9 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Hotels',
-            template: './index.pug',
+            template: './src/index.pug',
             filename: 'index.html',
-        })
+        }),
+        new MiniCssExtractPlugin(),
     ]
 }

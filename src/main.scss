@@ -14,6 +14,10 @@
 }
 @import 'blocks/header/header.scss';
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
 }

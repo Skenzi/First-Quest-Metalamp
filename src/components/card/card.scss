@@ -1,0 +1,43 @@
+.card {
+    width: 380px;
+    padding: 40px 30px 30px 30px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    &-body {
+        padding: 10px;
+    }
+    &-title {
+        font-size: 22px;
+        font-weight: bold;
+    }
+    &-form {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        .form-group:nth-child(1n + 2) {
+            margin-top: 10px;
+        }
+        .form-element:nth-of-type(1n + 2) {
+            margin-top: 10px;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-element {
+            width: 100%;
+        }
+        & .button-submit {
+            margin-top: 20px;
+        }
+    }
+    &-redirect {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .redirect-text {
+            font-size: 14px;
+        }
+    }
+}

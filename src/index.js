@@ -1,4 +1,4 @@
-import './main.scss';
-import header from './blocks/header/header.js';
+import './scss/main.scss';
+import header from './components/header/header.js';
 
 header();

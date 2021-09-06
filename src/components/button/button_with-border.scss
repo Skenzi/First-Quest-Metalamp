@@ -1,0 +1,9 @@
+.button-with-borders {
+    border: 2px solid transparent;
+    & > .button-text {
+        background-color: #fff;
+        border-radius: 22px;
+        font-size: 12px;
+        font-weight: 700;
+    }
+}

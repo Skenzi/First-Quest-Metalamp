@@ -1,0 +1,7 @@
+.button-fill {
+    border: none;
+    & > .button-text {
+        background-color: transparent;
+        color: #fff;
+    }
+}

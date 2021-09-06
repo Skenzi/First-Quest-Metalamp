@@ -48,32 +48,9 @@
 .active {
     display: block;
 }
-.sign {
-    display: inline-block;
+.sign-buttons {
     margin-left: 20px;
-    &-button {
-        cursor: pointer;
-        font-family: 'Montserrat', serif;
-        padding: 0;
-        text-transform: uppercase;
-        color: #BC9CFF;
-        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-        border: 2px solid transparent;
-        border-radius: 22px;
-    }
-    &-button > span {
-        display: block;
-        background-color: #fff;
-        padding: 10px 20px;
-        border-radius: 22px;
-        font-size: 12px;
-        font-weight: 700;
-    }
-    &-button-fill {
-        color: #fff;
-        border: none;
-    }
-    &-button-fill > span {
-        background-color: transparent;
+    & > .button:nth-child(1n + 2) {
+        margin-left: 20px;
     }
 }

@@ -3,10 +3,12 @@ html(lang="ru")
   head
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    script(src="path/to/jquery.js")
-    script(src="path/to/jquery.nice-select.js")
   body
     .container
-      include blocks/header/header.pug
-
-      include blocks/footer/footer.pug
+      include components/header/header.pug
+      include components/input/input.pug
+      include components/card/card.pug
+      +card-hotel-number()
+      +card-sign-up()
+      +card-sign-in()
+      include components/footer/footer.pug

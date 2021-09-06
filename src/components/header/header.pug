@@ -1,3 +1,5 @@
+include ../button/button
+
 header.header
   .header-logo Toxin
   nav.header-nav
@@ -26,8 +28,6 @@ header.header
           a(href="#").dropdown-item-link step1
         li.dropdown-item
           a(href="#").dropdown-item-link step1
-    .sign
-      button.header-nav-item.sign-button
-        span войти
-      button.header-nav-item.sign-button.sign-button-fill
-        span зарегистрироваться
+  .sign-buttons
+    +button({class: 'button button-with-borders'}, 'войти')
+    +button({class: 'button button-fill'}, 'зарегистрироваться')

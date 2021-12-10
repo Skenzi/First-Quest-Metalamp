@@ -55,6 +55,11 @@ module.exports = {
             template: './src/index.pug',
             filename: 'index.html',
         }),
+        new HtmlWebpackPlugin({
+            title: 'UI-kit',
+            template: './src/UI-kit/index.pug',
+            filename: '../UI-kit/ui-kit.html',
+        }),
         new MiniCssExtractPlugin(),
     ]
 }

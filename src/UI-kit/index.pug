@@ -1,0 +1,20 @@
+doctype html
+html(lang="ru")
+  head
+    script(type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js")
+    script(type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js")
+    script(src="js/kendo.all.min.js")
+  body
+    .container
+      include ../components/header/header.pug
+      include ../components/card/card.pug
+      include ../components/checkbox/checkbox.pug
+      include ../components/toggle/toggle.pug
+      +toggle({class: 'toggle', for: 'switcherAccept'}, 'toggle-input')
+      +checkbox({class: 'checkbox', for: 'name'}, 'checkbox-input')
+      +card-hotel-number()
+      +card-sign-up()
+      +card-sign-in()
+      +card-dates()
+      +toggle({class: 'toggle', for: 'switcher'})
+      include ../components/footer/footer.pug

@@ -30,7 +30,7 @@
     border-left: 0.2em;
     border-right: 0.2em;
 }
-.dropdown {
+.dropdown-header {
     list-style: none;
     position: absolute;
     display: none;
@@ -44,9 +44,6 @@
         color: black;
         text-decoration-line: none;
     }
-}
-.active {
-    display: block;
 }
 .sign-buttons {
     margin-left: 20px;

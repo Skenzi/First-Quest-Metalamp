@@ -3,15 +3,16 @@ html(lang="ru")
   head
     script(type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js")
     script(type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js")
-    script(src="js/kendo.all.min.js")
   body
     .container
       include ../components/header/header.pug
       include ../components/card/card.pug
       include ../components/checkbox/checkbox.pug
       include ../components/toggle/toggle.pug
-      +toggle({class: 'toggle', for: 'switcherAccept'}, 'toggle-input')
-      +checkbox({class: 'checkbox', for: 'name'}, 'checkbox-input')
+      include ../components/dropdown/dropdown.pug
+      +checkbox({class: 'toggle', for: 'switcherAccept'}, 'toggle-input')
+      +checkbox({class: 'checkbox', for: 'name'}, 'checkbox-input', 'checkbox simple')
+      +dropdown('Dropdown menu')
       +card-hotel-number()
       +card-sign-up()
       +card-sign-in()

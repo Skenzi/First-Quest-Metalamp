@@ -1,3 +1,4 @@
-mixin checkbox(attrbsLabel = {}, classCheckbox = '')
+mixin checkbox(attrbsLabel = {}, classCheckbox = '', textLabel = '')
     input(type="checkbox" id=attrbsLabel.for class=classCheckbox)
-    label&attributes(attrbsLabel)
+    label(for=attrbsLabel.for)= textLabel
+        div&attributes(attrbsLabel)

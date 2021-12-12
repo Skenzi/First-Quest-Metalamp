@@ -11,7 +11,7 @@
         display: none;
     }
     &-input:checked {
-        &+.checkbox {
+        &+label>.checkbox {
             border-color: #BC9CFF;
             &::before {
                 content: '';

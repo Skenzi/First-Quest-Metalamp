@@ -1,0 +1,22 @@
+mixin dropdown(dropdownText = '')
+    .dropdown
+        button.button.dropdown-toggle= dropdownText
+        ul.dropdown-menu
+            li(class=`dropdown-menu-el`)
+                div.el-text Спальни
+                .el-count
+                    button.button.btn-decrement -
+                    span.count 0
+                    button.button.btn-increment +
+            li(class=`dropdown-menu-el`)
+                div.el-text Кровати
+                .el-count
+                    button.button.btn-decrement -
+                    span.count 0
+                    button.button.btn-increment +
+            li(class=`dropdown-menu-el`)
+                div.el-text Ванные комнаты
+                .el-count
+                    button.button.btn-decrement -
+                    span.count 0
+                    button.button.btn-increment +

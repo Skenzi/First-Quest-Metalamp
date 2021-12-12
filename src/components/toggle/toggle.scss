@@ -20,7 +20,7 @@
         display: none;
     }
     &-input:checked {
-        &+.toggle {
+        &+label>.toggle {
             border-color: #BC9CFF;
             &::after {
                 background-color: #BC9CFF;

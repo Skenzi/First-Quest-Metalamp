@@ -1,0 +1,40 @@
+.form {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    flex-wrap: wrap;
+
+    &-row {
+        display: flex;
+        flex: 1;
+    }
+
+    &-group {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+    }
+
+    &-row:nth-child(1n + 2) {
+        margin-top: 10px;
+    }
+
+    &-element:nth-of-type(1n + 2) {
+        margin-top: 10px;
+    }
+
+    &-label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    &-element {
+        width: 100%;
+    }
+
+    & .button-submit {
+        margin-top: 20px;
+    }
+}

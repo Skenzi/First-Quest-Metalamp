@@ -1,22 +1,27 @@
-mixin dropdown(dropdownText = '')
+mixin dropdown(dropdownText = '0 спален 0 кроватей 0 ванных комнат')
     .dropdown
-        button.button.dropdown-toggle= dropdownText
+        button(type="button").button.dropdown-toggle
+            span.dropdown-toggle_text= dropdownText
         ul.dropdown-menu
             li(class=`dropdown-menu-el`)
                 div.el-text Спальни
                 .el-count
-                    button.button.btn-decrement -
+                    button(type="button").button.btn-decrement -
                     span.count 0
-                    button.button.btn-increment +
+                    button(type="button").button.btn-increment +
             li(class=`dropdown-menu-el`)
                 div.el-text Кровати
                 .el-count
-                    button.button.btn-decrement -
+                    button(type="button").button.btn-decrement -
                     span.count 0
-                    button.button.btn-increment +
+                    button(type="button").button.btn-increment +
             li(class=`dropdown-menu-el`)
                 div.el-text Ванные комнаты
                 .el-count
-                    button.button.btn-decrement -
+                    button(type="button").button.btn-decrement -
                     span.count 0
-                    button.button.btn-increment +
+                    button(type="button").button.btn-increment +
+
+mixin date-dropdown(id)
+    button(id=id type='button' class="input dropdown-toggle")
+        span.dropdown-toggle_text ДД.ММ.ГГГГ

@@ -1,6 +1,7 @@
 .dropdown {
     display: inline-block;
     width: 266px;
+
     &-toggle {
         display: flex;
         justify-content: space-between;
@@ -13,6 +14,7 @@
         background: none;
         border: 1px solid rgba(31, 32, 65, 0.25);
         border-radius: 2px 2px 0 0;
+
         &::after {
             content: '';
             display: inline-block;
@@ -22,13 +24,23 @@
             border-right: 2px solid rgba(31, 32, 65, 0.75);
             transform: rotate(135deg);
         }
-        &.show {
-            border-color:rgba(31, 32, 65, 0.5);
+
+        &_text {
+            width: 70%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
+
+        &.show {
+            border-color: rgba(31, 32, 65, 0.5);
+        }
+
         &.show::after {
             transform: rotate(315deg);
         }
     }
+
     &-menu {
         display: none;
         padding: 7px 15px;
@@ -37,24 +49,30 @@
         border-radius: 0 0 2px 2px;
         border-top: 0;
         color: #1F2041;
+
         &.active {
-            border-color:rgba(31, 32, 65, 0.5);
+            border-color: rgba(31, 32, 65, 0.5);
         }
+
         &-el {
             &:nth-child(1n + 2) {
                 margin-top: 7px;
             }
+
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-size: 12px;
+
             & * {
                 display: inline-block;
             }
+
             & .count {
                 display: inline-block;
                 margin: 0 10px;
             }
+
             .button {
                 width: 30px;
                 height: 30px;
@@ -62,6 +80,7 @@
                 border-radius: 50%;
                 background: none;
             }
+
             .button:active {
                 border-color: rgba(31, 32, 65, 0.25);
             }

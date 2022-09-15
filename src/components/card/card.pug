@@ -1,4 +1,6 @@
 include ../input/input.pug
+include ../datepicker/datepicker.pug
+include ../form/form.pug
 
 mixin card-dates()
   input.dates(name="dates" type="text")
@@ -13,6 +15,11 @@ mixin card-hotel-number(attrbsImg)
       hr
       span.card-stars star star star star star
       span.card-otziv 145 Отзывов
+
+mixin card-find-hotel-room()
+  .card
+    .card-title Найдём номера под ваши пожелания
+    +form-card-find-hotel-room()
 
 mixin card-sign-in(attrbsImg)
   .card
@@ -40,7 +47,7 @@ mixin card-sign-up(attrbsImg)
         label(for="women") Женский
       .form-group
         label.form-label Дата рождения
-        +input({type: 'text', name: "birthday", placeholder: 'ДД.ММ.ГГГГ', class: 'input form-element'})
+        +datepicker({type: 'text', name: "birthday", placeholder: 'ДД.ММ.ГГГГ', class: 'input form-element', id: 'datepicker'})
       .form-group
         label.form-label Данные для входа в сервис
         +input({type: "email", name: 'email', placeholder: "Email", class: 'input form-element'})

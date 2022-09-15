@@ -1,0 +1,17 @@
+include ../dropdown/dropdown.pug
+
+mixin form-card-find-hotel-room()
+    form.form
+      input(type="text" id="daterange" data-theme="myTheme" data-id="test")
+      .form-row
+        .form-group
+          label.form-label прибытие
+          +date-dropdown('daterange-from')
+        .form-group
+          label.form-label выезд
+          +date-dropdown('daterange-to')
+      .form-row
+        .form-group
+          label.form-label гости
+          +dropdown()
+      +button({type: 'submit', class: 'button button-fill button-submit'}, "Найти номер")

@@ -2,8 +2,8 @@ include ../dropdown/dropdown.pug
 
 mixin form-card-find-hotel-room()
     form.form
-      input(type="text" id="daterange" data-theme="myTheme" data-id="test")
-      .form-row
+      .form-row.relative
+        input(type="text" id="daterange" data-theme="myTheme")
         .form-group
           label.form-label прибытие
           +date-dropdown('daterange-from')
@@ -15,3 +15,45 @@ mixin form-card-find-hotel-room()
           label.form-label гости
           +dropdown()
       +button({type: 'submit', class: 'button button-fill button-submit'}, "Найти номер")
+
+mixin form-card-sign-up()
+  form.form
+    .form-row
+      .form-group
+        input(type="text", placeholder="Имя", class='input')
+        input(type="text", placeholder="Фамилия", class='input')
+    .form-row
+      .form-group
+        input(type='radio' name='gender' id='men')
+        label(for="men") Мужской
+      .form-group
+        input(type='radio' name='gender' id='women')
+        label(for="women") Женский
+    .form-row.relative
+      .form-group
+        label.form-label Дата рождения
+        +datepicker({type: 'text', name: "birthday", placeholder: 'ДД.ММ.ГГГГ', class: 'input', id: 'datepicker'})
+    .form-row
+      .form-group
+        label.form-label Данные для входа в сервис
+        +input({type: "email", name: 'email', placeholder: "Email", class: 'input'})
+        +input({type: "password", name: 'password', placeholder: "Пароль", class: 'input'})
+    .form-row
+      .form-group
+        input(type='checkbox')
+        span Получать спецпредложения
+    +button({type: 'submit', class: 'button button-fill button-submit'}, "перейти к оплате")
+    .card-redirect
+      span.redirect-text Уже есть аккаунт на Toxin?
+      +button({class: 'button button-with-borders'}, 'Войти')
+
+mixin form-card-sign-in()
+  form.card-form
+    .form-row
+      .form-group
+        +input({type: "email", name: 'email', placeholder: "Email", class: 'input'})
+        +input({type: "password", name: 'password', placeholder: "Пароль", class: 'input'})
+    +button({type: 'submit', class: 'button button-fill button-submit'}, "войти")
+    .card-redirect
+      span.redirect-text Нет аккаунта на Toxin?
+      +button({class: 'button button-with-borders'}, 'Создать')

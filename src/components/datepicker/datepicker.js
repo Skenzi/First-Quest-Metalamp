@@ -1,23 +1,34 @@
-import $ from 'jquery';
-import'@dmuy/jquery-datepicker/duDatepicker.css'
-import duDatepicker from '@dmuy/jquery-datepicker';
+import AirDatepicker from 'air-datepicker';
+import 'air-datepicker/air-datepicker.css';
 
 export default (elements) => {
     elements.forEach(({ idInput, options = {}}) => {
-        const mainInput = $(idInput);
-        mainInput.duDatepicker({
-            format: 'dd.mm.yyyy',
-            ...options
-        })
-
-        const parentOfInput = mainInput.parent();
-        
-        const datepickers = $('.dcalendarpicker');
-        const lastDatepicker = datepickers.last();
-
-        lastDatepicker.attr('data-input-id', idInput);
-        parentOfInput.append(lastDatepicker);
+        new AirDatepicker(idInput);
     })
 }
 
-const test = 'test';
+const testDatepicker = () => {
+    const months = [
+        'Январь',
+        'Февраль',
+        'Март',
+        'Апрель',
+        'Май',
+        'Июнь',
+        'Июль',
+        'Август',
+        'Сентябрь',
+        'Октябрь',
+        'Ноябрь',
+        'Декабрь',
+    ]
+    const currentDate = Date.now();
+    const currentMonthIndex = new Date(currentDate).getMonth();
+    const currentDay = new Date(currentDate).getDate();
+    const currentYear = new Date(currentDate).getFullYear();
+    const lastDay = new Date(currentYear, currentMonthIndex + 1, 0).getDate()
+
+    console.log(lastDay, currentDay, currentMonthIndex, currentYear)
+};
+
+testDatepicker()

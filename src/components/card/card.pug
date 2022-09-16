@@ -24,38 +24,9 @@ mixin card-find-hotel-room()
 mixin card-sign-in(attrbsImg)
   .card
     .card-title Войти
-    form.card-form
-      .form-group
-        +input({type: "email", name: 'email', placeholder: "Email", class: 'input form-element'})
-        +input({type: "password", name: 'password', placeholder: "Пароль", class: 'input form-element'})
-      +button({type: 'submit', class: 'button button-fill button-submit'}, "войти")
-    .card-redirect
-      span.redirect-text Нет аккаунта на Toxin?
-      +button({class: 'button button-with-borders'}, 'Создать')
+    +form-card-sign-in()
 
 mixin card-sign-up(attrbsImg)
   .card
     .card-title Регистрация аккаунта
-    form.card-form
-      .form-group
-        input(type="text", placeholder="Имя", class='input form-element')
-        input(type="text", placeholder="Фамилия", class='input form-element')
-      .form-group
-        input(type='radio' name='gender' id='men')
-        label(for="men") Мужской
-        input(type='radio' name='gender' id='women')
-        label(for="women") Женский
-      .form-group
-        label.form-label Дата рождения
-        +datepicker({type: 'text', name: "birthday", placeholder: 'ДД.ММ.ГГГГ', class: 'input form-element', id: 'datepicker'})
-      .form-group
-        label.form-label Данные для входа в сервис
-        +input({type: "email", name: 'email', placeholder: "Email", class: 'input form-element'})
-        +input({type: "password", name: 'password', placeholder: "Пароль", class: 'input form-element'})
-      .form-group
-        input(type='checkbox')
-        span Получать спецпредложения
-      +button({type: 'submit', class: 'button button-fill button-submit'}, "перейти к оплате")
-    .card-redirect
-      span.redirect-text Уже есть аккаунт на Toxin?
-      +button({class: 'button button-with-borders'}, 'Войти')
+    +form-card-sign-up()

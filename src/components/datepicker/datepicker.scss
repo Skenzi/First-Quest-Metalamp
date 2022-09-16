@@ -1,3 +1,10 @@
 .dudp__wrapper[data-theme='myTheme'] .dudp__calendar-header {
     display: none;
 }
+.dcalendarpicker.dp__open {
+    position: absolute;
+    top: -680%;
+    left: 50%;
+    background-color: transparent !important;
+    overflow: initial;
+}

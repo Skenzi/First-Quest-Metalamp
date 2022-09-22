@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import './scss/main.scss';
+import './styles/main.scss';
 import header from './components/header/header.js';
 import dropdown from './components/dropdown/dropdown.js';
 import addDatepickersTo from './components/datepicker/datepicker.js';

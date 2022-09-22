@@ -1,10 +1,14 @@
-.dudp__wrapper[data-theme='myTheme'] .dudp__calendar-header {
-    display: none;
+.air-datepicker-body--day-names .air-datepicker-body--day-name {
+    color: $main-color;
 }
-.dcalendarpicker.dp__open {
-    position: absolute;
-    top: -680%;
-    left: 50%;
-    background-color: transparent !important;
-    overflow: initial;
+
+.air-datepicker .air-datepicker--buttons {
+    padding: 20px;
+    border: 0;
+}
+
+.air-datepicker-body--cells .air-datepicker-cell.-current- {
+    color: rgb(255, 255, 255);
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border-radius: 22px;
 }

@@ -56,9 +56,9 @@ module.exports = {
             filename: 'index.html',
         }),
         new HtmlWebpackPlugin({
-            title: 'UI-kit',
-            template: './src/UI-kit/index.pug',
-            filename: '../UI-kit/ui-kit.html',
+            title: 'Hotels1',
+            template: './src/pages/UI-kit/index.pug',
+            filename: 'index1.html',
         }),
         new MiniCssExtractPlugin(),
     ]

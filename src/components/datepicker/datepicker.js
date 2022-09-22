@@ -3,7 +3,10 @@ import 'air-datepicker/air-datepicker.css';
 
 export default (elements) => {
     elements.forEach(({ idInput, options = {}}) => {
-        new AirDatepicker(idInput);
+        const date = new AirDatepicker(idInput, {
+            buttons: ['clear'],
+            visible: true
+        });
     })
 }
 

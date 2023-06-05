@@ -8,10 +8,14 @@ const mode = process.env.NODE_ENV || 'development';
 
 module.exports = {
     mode,
-    entry: './src/index.js',
+    entry: './src/pages/UiPage/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
+    },
+    devServer: {
+        port: 9000,
+        compress: true,
     },
     module: {
         rules: [
@@ -26,6 +30,14 @@ module.exports = {
                     },
                     {
                         loader: 'postcss-loader',
+                        options: {
+                            postcssOptions: {
+                                plugins: [
+                                    autoprefixer(),
+                                    cssnano(),
+                                ]
+                            }
+                        }
                     },
                     {
                         loader: 'sass-loader',
@@ -51,15 +63,29 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
+            title: 'Ui Kit',
+            template: './src/pages/UiPage/index.pug',
+            filename: 'index.html',
+        })/*,
+        new HtmlWebpackPlugin({
             title: 'Hotels',
             template: './src/index.pug',
-            filename: 'index.html',
-        }),
-        new HtmlWebpackPlugin({
-            title: 'Hotels1',
-            template: './src/pages/UI-kit/index.pug',
             filename: 'index1.html',
-        }),
+        })*/,
         new MiniCssExtractPlugin(),
     ]
 }
+
+
+/*
+    test: /\.(woff(2)?|eot|ttf|otf|)$/,
+    use: [
+        {
+            loader: 'file-loader',
+            options: {
+                name: '[name]-[hash].[ext]',
+                outputPath: 'fonts',
+            }
+        }
+    ]
+*/

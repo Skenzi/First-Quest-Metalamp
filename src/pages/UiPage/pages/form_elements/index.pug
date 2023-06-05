@@ -1,0 +1,32 @@
+include ../../../../ui-kit/input/input.pug
+include ../../../../ui-kit/checkbox/checkbox.pug
+include ../../../../ui-kit/dropdown/dropdown.pug
+include ../../../../components/datepicker/datepicker.pug
+
+.container.space-between
+    .col
+        .row.f-wrap.space-between.a-items-center
+            h3(class='w-100')= 'Title field'
+            span= 'DEFAULT'
+            +text-field('Name')
+        .row.f-wrap.space-between.a-items-center
+            h3(class='w-100')= 'Title field'
+            span= 'HOVER / FOCUS'
+            +text-field('Text')(class='form-control--active' value='Text example')
+        .row.f-wrap.space-between.a-items-center
+            h3(class='w-100')= 'Title masked field'
+            span= 'Masked'
+            +masked-text-field('Text')(class='form-control--active')
+        .row.f-wrap.space-between.a-items-center
+            h3(class='w-100')= 'Dropdown'
+            +dropdown()
+        .row.f-wrap.space-between.a-items-center
+            h3(class='w-100')= 'Dropdown'
+            +dropdown()
+        .row.f-wrap.space-between.a-items-center
+            h3(class='w-100')= 'Datepicker'
+            +daterange()
+    .col
+        .row.f-wrap.space-between.a-items-center
+            h3= 'Checkbox'
+            +checkbox('Name', 'test')

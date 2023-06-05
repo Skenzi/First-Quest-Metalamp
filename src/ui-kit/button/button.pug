@@ -1,0 +1,5 @@
+mixin button(attrbs = {}, text='')
+  button.button&attributes(attrbs)
+    if text
+      =text
+    block

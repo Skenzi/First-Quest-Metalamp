@@ -1,0 +1,33 @@
+.checkbox {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-left: 4px;
+    border: 1px solid #1F204140;
+    border-radius: 25%;
+    cursor: pointer;
+
+    &-input {
+        display: none;
+    }
+
+    &-input:checked+label>.checkbox {
+        border-color: #BC9CFF;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 5px;
+            height: 8px;
+            border: 2px solid transparent;
+            border-top: 0;
+            border-left: 0;
+            border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            border-image-slice: 1;
+            transform: rotate(45deg) translate(-95%, -20%);
+        }
+    }
+}

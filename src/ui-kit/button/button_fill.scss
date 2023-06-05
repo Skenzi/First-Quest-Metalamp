@@ -1,7 +1,7 @@
 .button-fill {
     border: none;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     & > .button-text {
-        background-color: transparent;
         color: #fff;
     }
 }

@@ -1,19 +1,15 @@
 .button {
     cursor: pointer;
+    padding: 10px 20px;
     font-family: 'Montserrat', serif;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: transparent;
     border-radius: 22px;
     border: none;
     text-transform: uppercase;
+    color: $main-color;
     &:active {
         opacity: 50%;
     }
-}
-
-.button-text {
-    display: block;
-    padding: 10px 20px;
-    color: #BC9CFF;
 }
 
 @import './button_fill.scss';

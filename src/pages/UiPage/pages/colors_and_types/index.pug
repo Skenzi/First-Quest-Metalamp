@@ -1,0 +1,38 @@
+mixin colorRow(classOfColor, name, code)
+    .row&attributes(attributes)
+        div(class=`${classOfColor} color__example`)
+        .color__description
+            span.top=name
+            sapn.bottom=code
+
+mixin typeRow(typeName, textExample, classOfType = '')
+    .row&attributes(attributes)
+        if typeName == 'H1'
+            div(class=`type__name type__name--h1 ${classOfType}`)=typeName
+            h1=textExample
+        else if typeName == 'H2'
+            div(class=`type__name type__name--h2 ${classOfType}`)=typeName
+            h2=textExample
+        else if typeName == 'H3'
+            div(class=`type__name type__name--h3 ${classOfType}`)=typeName
+            h3=textExample
+        else
+            div(class='type__name')=typeName
+            div=textExample
+
+
+
+.container.space-between
+    .col
+        +colorRow('dark-100', 'Dark Shade 100%', '#1F2041')
+        +colorRow('dark-75', 'Dark Shade 75%', '#1F2041')(class='mt-20')
+        +colorRow('dark-50', 'Dark Shade 50%', '#1F2041')(class='mt-20')
+        +colorRow('dark-25', 'Dark Shade 25%', '#1F2041')(class='mt-20')
+        +colorRow('dark-5', 'Dark Shade 5%', '#1F2041')(class='mt-20')
+        +colorRow('purple', 'Purple', '#BC9CFF')(class='mt-20')
+        +colorRow('green', 'Green', '#6FCF97')(class='mt-20')
+    .col.a-content-flex-start
+        +typeRow('H1', 'This one is the sub-section or widget title')
+        +typeRow('H2', 'Next one is the item title inside widgets')(class='mt-50')
+        +typeRow('H3', 'This is a label or CTA text')(class='mt-50')
+        +typeRow('Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')(class='mt-50')

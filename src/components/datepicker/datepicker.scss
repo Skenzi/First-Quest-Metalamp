@@ -12,3 +12,61 @@
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     border-radius: 22px;
 }
+
+.calender {
+    &-wrapper {
+        padding: 20px;
+
+        & .button {
+            padding: 0;
+        }
+    }
+
+    &-top {
+        display: flex;
+
+        &__month {
+            width: 100%;
+
+            font-size: 19px;
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+
+    &-body {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        color: $dark-25;
+        &__cell {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+
+            &--active {
+                color: $dark-50;
+            }
+
+            &--today {
+                background-color: $green;
+                color: white;
+                border-radius: 50%;
+            }
+        }
+
+        &__days &__cell {
+            cursor: pointer;
+        }
+        &__weekdays {
+            font-weight: 700;
+            color: $main-color;
+        }
+    }
+
+    &-bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+}

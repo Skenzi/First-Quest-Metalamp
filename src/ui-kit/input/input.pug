@@ -1,0 +1,8 @@
+mixin text-field(placeholderText = '')
+  input(class=`form-control ${attributes.class}` placeholder=placeholderText value=attributes.value)
+
+mixin date-text-field(placeholderText = '')
+  input(class=`form-control ${attributes.class}` placeholder=placeholderText value=attributes.value)
+
+mixin masked-text-field(placeholderText = '')
+  input(class=`form-control ${attributes.class}` data-masked placeholder=placeholderText value=attributes.value)

@@ -1,0 +1,17 @@
+.form-control {
+    padding: 13px 15px;
+    width: 100%;
+    border: 1px solid $dark-25;
+    outline: none;
+    color: $dark-75;
+    border-radius: 4px;
+    &::placeholder {
+        color: $dark-25;
+    }
+    &:focus, &:hover, &:focus::placeholder, &:hover::placeholder {
+        border-color: $dark-50;
+    }
+    &--active {
+        border-color: $dark-50;
+    }
+}

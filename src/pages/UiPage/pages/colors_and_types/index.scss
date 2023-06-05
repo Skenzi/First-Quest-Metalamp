@@ -1,0 +1,46 @@
+.color {
+    & .row:nth-child(1n+2) {
+        margin-top: 20px;
+    }
+    &__example {
+        height: 70px;
+        width: 70px;
+        margin-right: 40px;
+        border-radius: 6px;
+    }
+    &__description {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        line-height: 28px;
+        & * {
+            font-size: 19px;
+        }
+        & .top {
+            flex-basis: 100%;
+            font-weight: 700;
+        }
+    }
+}
+
+.type {
+    &__name {
+        width: 40px;
+        margin-right: 30px;
+        color: $dark-25;
+        text-align: end;
+        &--h1 {
+            font-size: 24px;
+        }
+        &--h2 {
+            font-size: 19px;
+        }
+        &--h3 {
+            font-size: 12px;
+        }
+    }
+    &__example {
+        font-size: 24px;
+        font-weight: bold;
+    }
+}

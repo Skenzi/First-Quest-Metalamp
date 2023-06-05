@@ -1,10 +1,10 @@
-doctype html
-html(lang="ru")
-  head
-    script(type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js")
-    script(type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js")
-  body
-    .container
+import './ui-kit.scss';
+import 'jquery-mask-plugin';
+import runScripts from './pages/form_elements';
+
+runScripts();
+/*
+.container
       include ../../components/header/header.pug
       include ../../components/card/card.pug
       include ../../components/checkbox/checkbox.pug
@@ -21,3 +21,4 @@ html(lang="ru")
       +card-dates()
       +toggle({class: 'toggle', for: 'switcher'})
       include ../../components/footer/footer.pug
+*/

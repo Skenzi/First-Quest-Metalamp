@@ -1,3 +1,4 @@
+include ../../ui-kit/input/input.pug
 include ../../ui-kit/dropdown/dropdown.pug
 
 mixin form-card-find-hotel-room()
@@ -36,8 +37,8 @@ mixin form-card-sign-up()
     .form-row
       .form-group
         label.form-label Данные для входа в сервис
-        +input({type: "email", name: 'email', placeholder: "Email", class: 'input'})
-        +input({type: "password", name: 'password', placeholder: "Пароль", class: 'input'})
+        +text-field({type: "email", name: 'email', placeholder: "Email", class: 'input'})
+        +text-field({type: "password", name: 'password', placeholder: "Пароль", class: 'input'})
     .form-row
       .form-group
         input(type='checkbox')
@@ -51,8 +52,8 @@ mixin form-card-sign-in()
   form.card-form
     .form-row
       .form-group
-        +input({type: "email", name: 'email', placeholder: "Email", class: 'input'})
-        +input({type: "password", name: 'password', placeholder: "Пароль", class: 'input'})
+        +text-field({type: "email", name: 'email', placeholder: "Email", class: 'input'})
+        +text-field({type: "password", name: 'password', placeholder: "Пароль", class: 'input'})
     +button({type: 'submit', class: 'button button-fill button-submit'}, "войти")
     .card-redirect
       span.redirect-text Нет аккаунта на Toxin?

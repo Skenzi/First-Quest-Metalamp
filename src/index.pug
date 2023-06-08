@@ -5,11 +5,11 @@ html(lang="ru")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
   body
     .container
-      include components/header/header.pug
+      include modules/header/header.pug
       include components/card/card.pug
-      include components/datepicker/datepicker.pug
+      include ui-kit/datepicker/datepicker.pug
       +card-hotel-number()
       +card-sign-up()
       +card-sign-in()
       +card-find-hotel-room()
-      include components/footer/footer.pug
+      include modules/footer/footer.pug

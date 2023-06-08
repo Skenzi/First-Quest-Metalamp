@@ -1,6 +1,6 @@
 import dropdownRun from '../../../../ui-kit/dropdown/dropdown';
 import inputrun from '../../../../ui-kit/input/input';
-import datepickerRun from '../../../../components/datepicker/datepicker';
+import datepickerRun from '../../../../ui-kit/datepicker/datepicker';
 
 const runScripts = () => {
     dropdownRun();

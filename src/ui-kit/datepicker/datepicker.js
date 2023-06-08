@@ -146,7 +146,7 @@ const renderCalender = (calenderElements, calenderApi) => {
         const row = document.createElement('div');
         for (const day of week) {
             const dayEl = document.createElement('span');
-            const activeDayClass = day.isCurrentMonth && 'calender-body__cell--active';
+            const activeDayClass = (day.isCurrentMonth ? 'calender-body__cell--active' : 'calender-body__cell--inactive');
             const todayClass = day.isCurrentDay && 'calender-body__cell--today';
             dayEl.classList.add('calender-body__cell', activeDayClass, todayClass);
             dayEl.setAttribute('data-date', day.fullDate);

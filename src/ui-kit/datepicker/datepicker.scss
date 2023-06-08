@@ -49,6 +49,10 @@
                 color: $dark-50;
             }
 
+            &--inactive {
+                color: $dark-25;
+            }
+
             &--today {
                 background-color: $green;
                 color: white;

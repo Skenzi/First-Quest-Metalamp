@@ -8,10 +8,13 @@ const mode = process.env.NODE_ENV || 'development';
 
 module.exports = {
     mode,
-    entry: './src/pages/UiPage/index.js',
+    entry: {
+        ui: './src/pages/UiPage/index.js',
+        main: './src/index.js'
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: '[name].bundle.js'
     },
     devServer: {
         port: 9000,
@@ -65,13 +68,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Ui Kit',
             template: './src/pages/UiPage/index.pug',
-            filename: 'index.html',
-        })/*,
+            filename: 'uikit.html',
+        }),
         new HtmlWebpackPlugin({
             title: 'Hotels',
             template: './src/index.pug',
-            filename: 'index1.html',
-        })*/,
+            filename: 'main.html',
+        }),
         new MiniCssExtractPlugin(),
     ]
 }

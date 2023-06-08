@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import './styles/main.scss';
-import header from './components/header/header.js';
-import dropdown from './components/dropdown/dropdown.js';
-import addDatepickersTo from './components/datepicker/datepicker.js';
+import header from './modules/header/header.js';
+import dropdown from './ui-kit/dropdown/dropdown.js';
+import addDatepickersTo from './ui-kit/datepicker/datepicker.js';
 
 const runApp = () => {
     header();
